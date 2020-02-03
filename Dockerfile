@@ -1,10 +1,10 @@
-FROM maven:3.5.4-jdk-8-alpine
+FROM maven:3.5.4-jdk-8-alpine AS builder
 COPY pom.xml .
 COPY src src/
 RUN mvn install -DskipTests
 
 FROM open-liberty as server-setup
-COPY --from=maven:3.5.4-jdk-8-alpine /target/LibertyProject.zip /config/
+COPY --from=builder /target/LibertyProject.zip /config/
 USER root
 RUN apt-get update \
     && apt-get install -y --no-install-recommends unzip \
