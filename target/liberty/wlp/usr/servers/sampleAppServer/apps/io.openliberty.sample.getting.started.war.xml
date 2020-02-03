@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="/Users/muralidhar/eclipse-workspace/tekton-test-open-liberty/src/main/webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="/Users/muralidhar/eclipse-workspace/tekton-test-open-liberty/target/classes" targetInArchive="/WEB-INF/classes"/>
+</archive>
